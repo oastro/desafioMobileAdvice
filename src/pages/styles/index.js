@@ -52,9 +52,9 @@ const styles = StyleSheet.create({
           borderWidth:1,
           marginTop: 20,
           alignItems: 'center',
+          justifyContent:'center',
         },
         textButton:{
-          marginTop:8,
           fontWeight: 'bold',
           fontSize: 12,
         },      
@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
         descProfile:{
           textAlign: 'center',
           padding: 20,
+          overflow:'hidden',
         },
         gitProfile:{
           flexDirection: 'row',
