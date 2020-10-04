@@ -24,4 +24,4 @@ O desafio consiste em, a partir de uma interface projetada no Figma, realizar o 
       
       * E agora basta ler o QR Code gerado, dessa forma o aplicativo estará na sua tela de forma mais prática e pronto para o teste.
 
-🚀*Espero ter sido claro e ter te ajudado de alguma forma a visualizar um projeto em React Native.*🚀
+🚀 *Espero ter sido claro e ter te ajudado de alguma forma a visualizar um projeto em React Native.* 🚀
