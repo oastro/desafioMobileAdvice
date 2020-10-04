@@ -56,18 +56,45 @@ const styles = StyleSheet.create({
           marginTop:8,
           fontWeight: 'bold',
           fontSize: 12,
-        },
+        },      
+    // !!---!! FIM LOGIN
+    // Todos os Styles da tela de PROFILE até !!---!!
         containerProfile:{
-
+              
         },
         textButtonVoltar:{
           marginTop: 16,
           marginLeft: 30,
           fontWeight: 'bold',
         },
-    // !!---!! FIM LOGIN
-    // Todos os Styles da tela de PROFILE até !!---!!
-        
+        userProfile:{
+          alignItems: 'center',
+          flexDirection: 'column',
+        },
+        avatarProfile:{
+          width: 195,
+          height: 195,
+        },
+        nameProfile:{
+          fontWeight: 'bold',
+          fontSize: 20,
+          marginTop:20,
+        },
+        descProfile:{
+          textAlign: 'center',
+          padding: 20,
+        },
+        gitProfile:{
+          flexDirection: 'row',
+          justifyContent:'center',
+        },
+        gitTextProfile:{
+          alignItems: 'flex-start',
+          padding:10,
+        },
+        gitNumberProfile:{
+          fontWeight:'bold',
+        },
     // !!---!! FIM PROFILE
 });
 
