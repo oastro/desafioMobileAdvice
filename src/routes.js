@@ -1,8 +1,9 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack'
+import {createStackNavigator} from '@react-navigation/stack';
 
 import Login from './pages/login';
+import Profile from './pages/profile';
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,10 @@ export default function Routes(){
                 <Stack.Screen 
                     name="Login"
                     component={Login}
+                />
+                <Stack.Screen 
+                    name="Profile"
+                    component={Profile}
                 />
             </Stack.Navigator>
         </NavigationContainer>

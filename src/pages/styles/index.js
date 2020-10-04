@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet} from 'react-native'; 
 
 const styles = StyleSheet.create({
-    // Todos os Styles da tela de Login até !!---!!
+    // Todos os Styles da tela de LOGIN até !!---!!
         container:{
           backgroundColor: '#FFF',
           flex:1,
@@ -56,8 +56,19 @@ const styles = StyleSheet.create({
           marginTop:8,
           fontWeight: 'bold',
           fontSize: 12,
-        }
-    // !!---!!
+        },
+        containerProfile:{
+
+        },
+        textButtonVoltar:{
+          marginTop: 16,
+          marginLeft: 30,
+          fontWeight: 'bold',
+        },
+    // !!---!! FIM LOGIN
+    // Todos os Styles da tela de PROFILE até !!---!!
+        
+    // !!---!! FIM PROFILE
 });
 
 
