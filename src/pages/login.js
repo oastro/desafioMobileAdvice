@@ -1,6 +1,10 @@
 import * as React from 'react';
-import { Text, Image, StyleSheet, TextInput, View, KeyboardAvoidingView} from 'react-native';
+import { Text, StyleSheet, TextInput, View, KeyboardAvoidingView} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+
+
+import GitHubLogo from '../assets/images/gitHubLogo.svg';
+import DeveloperCommit from '../assets/images/developerCommit.svg';
 
 const styles = StyleSheet.create({
     container:{
@@ -57,18 +61,18 @@ const styles = StyleSheet.create({
       fontSize: 12,
     }
   });
-
+  
 export default function Login() {
   return (
     <KeyboardAvoidingView style={styles.container} behavior='position'>
         
         <View style={styles.headerContainer}>
-            {/* <Image style ={styles.gitHubLogo} source={require('')} /> */}
+            <GitHubLogo style={styles.gitHubLogo}/>
             <Text style={styles.textAdviceHub}>AdviceHub</Text>
         </View>
     
     <View style={styles.bodyContainer}>
-        {/* <Image style = {styles.develeporCommit} source={require('')} /> */}
+        <DeveloperCommit style = {styles.develeporCommit}/>
         <Text style = {styles.bodyText}>Insira um usuário do GitHub</Text>
         <TextInput style={styles.bodyInput}/>
         <TouchableOpacity style={styles.bodyButton}>
