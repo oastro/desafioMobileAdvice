@@ -1,0 +1,12 @@
+{
+  "name": "desafioAdviceMobile",
+  "displayName": "desafioAdviceMobile",
+  "expo": {
+    "name": "desafioAdviceMobile",
+    "slug": "desafioAdviceMobile",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
