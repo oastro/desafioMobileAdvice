@@ -31,10 +31,11 @@ const styles = StyleSheet.create({
           height: 200,
         },
         bodyText:{
-          alignSelf: 'flex-start',
-          marginLeft: '15%',
+          alignSelf: 'center',
+          alignItems: 'flex-start',
           marginTop: 64,
           fontSize: 10,
+          width:260,
         },
         bodyInput:{
           height:45,

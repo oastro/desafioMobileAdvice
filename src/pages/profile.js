@@ -6,6 +6,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import styles from './styles';
 import GitRepos from './gitRepos';
 
+
+
 export default function Profile({navigation}){
     return(
         <SafeAreaView style={styles.containerProfile}>
