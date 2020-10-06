@@ -75,6 +75,7 @@ const styles = StyleSheet.create({
         avatarProfile:{
           width: 195,
           height: 195,
+          borderRadius: 100,
         },
         nameProfile:{
           fontWeight: 'bold',
