@@ -1,14 +1,31 @@
-import * as React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Text,View, Image} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import styles from './styles';
 import GitRepos from './gitRepos';
-
+import apiGitProfile from '../components/api';
 
 
 export default function Profile({navigation}){
+
+    const [data, setData] = useState([])
+
+    useEffect(()=>{
+        searchProfile()
+    },[])
+
+    async function searchProfile(){
+        await apiGitProfile.get('facebook')
+        .then((response) => {
+            setData(response.data);
+        })
+        .catch((error) =>{
+            console.log(error)
+        })
+    }
+
     return(
         <SafeAreaView style={styles.containerProfile}>
             <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -16,21 +33,21 @@ export default function Profile({navigation}){
             </TouchableOpacity>
 
             <View style={styles.userProfile}> 
-                <Image style={styles.avatarProfile} source={{uri:'https://avatars3.githubusercontent.com/u/69631?v=4'}}/> 
-                <Text style={styles.nameProfile}>Facebook</Text>
-                <Text style={styles.descProfile}>We are working to build community through open source technology. NB: members must have two-factor auth.</Text>
+                <Image style={styles.avatarProfile} source={{uri:`${data.avatar_url}`}}/> 
+                <Text style={styles.nameProfile}>{data.name}</Text>
+                <Text style={styles.descProfile}>{data.bio}</Text>
             </View>
             <View style={styles.gitProfile}>
                 <View style={styles.gitTextProfile}>
-                    <Text style={styles.gitNumberProfile}>124</Text>
+                    <Text style={styles.gitNumberProfile}>{data.public_repos}</Text>
                     <Text>Repositorios</Text>
                 </View>
                 <View style={styles.gitTextProfile}>
-                    <Text style={styles.gitNumberProfile}>168</Text>
+                    <Text style={styles.gitNumberProfile}>{data.followers}</Text>
                     <Text>Seguidores</Text>
                 </View>
                 <View style={styles.gitTextProfile}>
-                    <Text style={styles.gitNumberProfile}>123</Text>
+                    <Text style={styles.gitNumberProfile}>{data.following}</Text>
                     <Text>Seguindo</Text>         
                 </View>
             </View>
