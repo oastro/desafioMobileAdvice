@@ -8,16 +8,16 @@ import GitRepos from './gitRepos';
 import apiGitProfile from '../components/api';
 
 
-export default function Profile({navigation}){
-
-    const [data, setData] = useState([])
+export default function Profile({route,navigation}){
+    const searchValue = route.params;
+    const [data, setData] = useState([]);
 
     useEffect(()=>{
         searchProfile()
     },[])
 
     async function searchProfile(){
-        await apiGitProfile.get('facebook')
+        await apiGitProfile.get(`${searchValue}`)
         .then((response) => {
             setData(response.data);
         })
