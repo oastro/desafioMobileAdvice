@@ -1,4 +1,3 @@
-import React from 'react';
 import {StyleSheet} from 'react-native'; 
 
 const styles = StyleSheet.create({
@@ -6,9 +5,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#ECECEC',
       width:290,
       height:120,
-      marginTop:10,
       alignSelf:'center',
-      justifyContent:'flex-start',
   },
   containerText:{
       marginLeft:10,
@@ -18,7 +15,7 @@ const styles = StyleSheet.create({
       fontSize: 20,
   },
   descRepos:{
-      height:'50%',
+      height: 'auto',
       width:'auto',
       fontSize:10,
   },
