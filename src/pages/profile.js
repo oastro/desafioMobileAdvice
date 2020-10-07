@@ -9,7 +9,7 @@ import apiGitProfile from '../components/api';
 
 
 export default function Profile({route,navigation}){
-    const searchValue = route.params;
+    global.searchValue = route.params;
     const [data, setData] = useState([]);
 
     useEffect(()=>{

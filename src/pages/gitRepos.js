@@ -7,16 +7,15 @@ import apiGitProfile from '../components/api';
 
 export default function GitRepos(){
     const [data, setData] = useState([]);
-
+    console.log(data);
     useEffect(()=>{
         searchRepos()
     },[])
     
     async function searchRepos(){
-        await apiGitProfile.get(`/facebook/repos`)
+        await apiGitProfile.get(`/${searchValue}/repos`)
         .then((response) => {
            setData(response.data);
-
         })
         .catch((error) =>{
             console.log(error)
